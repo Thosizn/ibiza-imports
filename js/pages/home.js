@@ -70,7 +70,7 @@ Ibiza.pages.home = (() => {
     return `
       <a class="catalog-tile reveal" style="--delay:${(index % 4) * 70}ms" href="#/catalogo">
         <span class="catalog-tile__stripes" aria-hidden="true"><span></span><span></span><span></span></span>
-        <span class="catalog-tile__count">${total}</span>
+        <span class="catalog-tile__count">${total > 99 ? '99+' : total}</span>
         <span class="catalog-tile__label">camisas no catálogo</span>
         <span class="catalog-tile__cta">Ver todas ${icon('arrowRight', { size: 18 })}</span>
       </a>`;

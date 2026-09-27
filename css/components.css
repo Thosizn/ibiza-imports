@@ -943,9 +943,11 @@ a.badge--outline:hover { border-color: var(--ink); color: var(--text); }
   .request-banner { grid-template-columns: auto 1fr; }
   .request-banner__actions { grid-column: 1 / -1; }
 }
-@media (max-width: 480px) {
+@media (max-width: 560px) {
   .request-banner { grid-template-columns: 1fr; }
-  .request-banner__actions .btn { flex: 1; }
+  /* botões um embaixo do outro, largura total: o texto não é cortado */
+  .request-banner__actions { display: grid; grid-template-columns: 1fr; }
+  .request-banner__actions .btn { width: 100%; }
 }
 
 /* ---------- Botão flutuante do WhatsApp ---------- */
