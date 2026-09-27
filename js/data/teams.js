@@ -25,7 +25,7 @@ Ibiza.teams = [
   { id: 'gremio', name: 'Grêmio', category: 'brasileiros', crest: 'assets/teams/gremio.png', short: 'GRE' },
   { id: 'internacional', name: 'Internacional', category: 'brasileiros', crest: 'assets/teams/internacional.png', short: 'INT' },
 
-  // Europeus
+  // Internacionais (categoria 'europeus')
   { id: 'real-madrid', name: 'Real Madrid', category: 'europeus', crest: 'assets/teams/real-madrid.png', short: 'RMA' },
   { id: 'barcelona', name: 'Barcelona', category: 'europeus', crest: 'assets/teams/barcelona.png', short: 'FCB' },
   { id: 'manchester-city', name: 'Manchester City', category: 'europeus', crest: 'assets/teams/manchester-city.png', short: 'MCI' },
@@ -36,6 +36,8 @@ Ibiza.teams = [
   { id: 'inter-de-milao', name: 'Inter de Milão', category: 'europeus', crest: 'assets/teams/inter-de-milao.png', short: 'INT' },
   { id: 'arsenal', name: 'Arsenal', category: 'europeus', crest: 'assets/teams/arsenal.png', short: 'ARS' },
   { id: 'chelsea', name: 'Chelsea', category: 'europeus', crest: 'assets/teams/chelsea.png', short: 'CHE' },
+  { id: 'inter-miami', name: 'Inter Miami', category: 'europeus', crest: 'assets/teams/inter-miami.png', short: 'MIA' },
+  { id: 'al-nassr', name: 'Al-Nassr', category: 'europeus', crest: 'assets/teams/al-nassr.png', short: 'NAS' },
   { id: 'borussia-dortmund', name: 'Borussia Dortmund', category: 'europeus', crest: 'assets/teams/borussia-dortmund.png', short: 'BVB' },
   // Seleções (o nome inclui "Seleção", igual ao campo `team` dos produtos)
   // label: nome curto na faixa de escudos · plate: escudo sobre disco branco (escudos claros)
@@ -45,6 +47,10 @@ Ibiza.teams = [
   { id: 'franca', name: 'Seleção França', label: 'França', category: 'selecoes', crest: 'assets/teams/franca.png', plate: true, short: 'FRA' },
   { id: 'portugal', name: 'Seleção Portugal', label: 'Portugal', category: 'selecoes', crest: 'assets/teams/portugal.png', short: 'POR' },
   { id: 'inglaterra', name: 'Seleção Inglaterra', label: 'Inglaterra', category: 'selecoes', crest: 'assets/teams/inglaterra.png', short: 'ING' },
+  { id: 'holanda', name: 'Seleção Holanda', label: 'Holanda', category: 'selecoes', crest: 'assets/teams/holanda.png', short: 'HOL' },
+  { id: 'colombia', name: 'Seleção Colômbia', label: 'Colômbia', category: 'selecoes', crest: 'assets/teams/colombia.png', short: 'COL' },
+  { id: 'estados-unidos', name: 'Seleção Estados Unidos', label: 'Estados Unidos', category: 'selecoes', crest: 'assets/teams/estados-unidos.png', short: 'EUA' },
+  { id: 'japao', name: 'Seleção Japão', label: 'Japão', category: 'selecoes', crest: 'assets/teams/japao.png', short: 'JAP' },
   { id: 'alemanha', name: 'Seleção Alemanha', label: 'Alemanha', category: 'selecoes', crest: 'assets/teams/alemanha.png', plate: true, short: 'ALE' },
 
   { id: 'tottenham', name: 'Tottenham', category: 'europeus', crest: 'assets/teams/tottenham.png', short: 'TOT' },

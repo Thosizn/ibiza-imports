@@ -19,7 +19,7 @@ Ibiza.pages.home = (() => {
               <span class="text-accent">Viva o jogo.</span>
             </h1>
             <p class="hero__text">
-              Camisas dos clubes brasileiros, gigantes europeus e seleções do mundo inteiro — selecionadas para quem leva o futebol a sério.
+              Camisas dos clubes brasileiros, gigantes internacionais e seleções do mundo inteiro — selecionadas para quem leva o futebol a sério.
             </p>
             <div class="hero__actions">
               ${Ibiza.Button({ label: 'Ver catálogo', href: '#/catalogo', variant: 'primary', size: 'lg', icon: 'arrowRight' })}
