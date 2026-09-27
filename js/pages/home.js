@@ -33,11 +33,9 @@ Ibiza.pages.home = (() => {
           </div>
 
           <div class="hero__visual">
-            <div class="hero__ring" aria-hidden="true"></div>
-            <img class="hero__logo" src="assets/img/logo.jpg" alt="${config.storeName} — ${config.tagline}" width="758" height="751" />
+            <img class="hero__logo" src="assets/img/logo.png" alt="${config.storeName} — ${config.tagline}" width="758" height="751" />
           </div>
         </div>
-        <div class="hero__scroll" aria-hidden="true"><span></span></div>
       </section>`;
   }
 

@@ -40,7 +40,7 @@ Ibiza.Footer = (() => {
         <div class="site-footer__glow" aria-hidden="true"></div>
         <div class="container site-footer__grid">
           <div class="site-footer__brand">
-            <img class="site-footer__logo" src="assets/img/logo.jpg" alt="${escape(config.storeName)}" loading="lazy" />
+            <img class="site-footer__logo" src="assets/img/logo.png" alt="${escape(config.storeName)}" loading="lazy" />
             <p>${escape(config.description)}</p>
             <div class="site-footer__social">
               ${socialHtml}

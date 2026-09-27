@@ -203,6 +203,7 @@ a.badge--outline:hover { border-color: var(--ink); color: var(--text); }
   padding: 8px 12px;
   font-size: 14px;
   font-weight: 700;
+  white-space: nowrap;
   color: var(--muted-on-dark);
   transition: color var(--t-fast);
 }
