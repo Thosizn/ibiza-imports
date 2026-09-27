@@ -114,7 +114,7 @@ Ibiza.catalog = (() => {
       if (category && p.category !== category) return false;
       if (teamName && p.team !== teamName) return false;
       if (!q) return true;
-      const haystack = normalize([p.name, p.team, p.season, p.version, p.brand, p.color, getCategory(p.category)?.name].join(' '));
+      const haystack = normalize([p.name, p.team, p.season, p.version, p.brand, p.color, p.badge, p.player, getCategory(p.category)?.name].join(' '));
       return q.split(/\s+/).every((term) => haystack.includes(term));
     });
 
