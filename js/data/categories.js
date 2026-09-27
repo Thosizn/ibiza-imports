@@ -12,10 +12,17 @@ Ibiza.categories = [
     image: null,
   },
   {
-    id: 'europeus', // id mantido para não quebrar links antigos
-    name: 'Times internacionais',
-    shortName: 'Internacional',
-    description: 'Os gigantes do futebol mundial.',
+    id: 'europeus',
+    name: 'Times europeus',
+    shortName: 'Europeus',
+    description: 'Os gigantes das principais ligas da Europa.',
+    image: null,
+  },
+  {
+    id: 'mundo',
+    name: 'Resto do mundo',
+    shortName: 'Resto do mundo',
+    description: 'Clubes das Américas, Ásia e além.',
     image: null,
   },
   {

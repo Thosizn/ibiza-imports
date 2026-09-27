@@ -3,7 +3,7 @@
  *
  *   id        Usado na URL (#/catalogo?categoria=...&time=<id>).
  *   name      Deve ser igual ao campo `team` dos produtos.
- *   category  'brasileiros' | 'europeus' | 'selecoes'
+ *   category  'brasileiros' | 'europeus' | 'mundo' | 'selecoes'
  *   crest     Caminho da imagem do escudo (PNG com fundo transparente).
  *             Enquanto for null, o site mostra as iniciais do time.
  *   short     (opcional) Iniciais exibidas quando não há escudo.
@@ -25,7 +25,7 @@ Ibiza.teams = [
   { id: 'gremio', name: 'Grêmio', category: 'brasileiros', crest: 'assets/teams/gremio.png', short: 'GRE' },
   { id: 'internacional', name: 'Internacional', category: 'brasileiros', crest: 'assets/teams/internacional.png', short: 'INT' },
 
-  // Internacionais (categoria 'europeus')
+  // Europeus
   { id: 'real-madrid', name: 'Real Madrid', category: 'europeus', crest: 'assets/teams/real-madrid.png', short: 'RMA' },
   { id: 'barcelona', name: 'Barcelona', category: 'europeus', crest: 'assets/teams/barcelona.png', short: 'FCB' },
   { id: 'manchester-city', name: 'Manchester City', category: 'europeus', crest: 'assets/teams/manchester-city.png', short: 'MCI' },
@@ -36,8 +36,8 @@ Ibiza.teams = [
   { id: 'inter-de-milao', name: 'Inter de Milão', category: 'europeus', crest: 'assets/teams/inter-de-milao.png', short: 'INT' },
   { id: 'arsenal', name: 'Arsenal', category: 'europeus', crest: 'assets/teams/arsenal.png', short: 'ARS' },
   { id: 'chelsea', name: 'Chelsea', category: 'europeus', crest: 'assets/teams/chelsea.png', short: 'CHE' },
-  { id: 'inter-miami', name: 'Inter Miami', category: 'europeus', crest: 'assets/teams/inter-miami.png', short: 'MIA' },
-  { id: 'al-nassr', name: 'Al-Nassr', category: 'europeus', crest: 'assets/teams/al-nassr.png', short: 'NAS' },
+  { id: 'inter-miami', name: 'Inter Miami', category: 'mundo', crest: 'assets/teams/inter-miami.png', short: 'MIA' },
+  { id: 'al-nassr', name: 'Al-Nassr', category: 'mundo', crest: 'assets/teams/al-nassr.png', short: 'NAS' },
   { id: 'borussia-dortmund', name: 'Borussia Dortmund', category: 'europeus', crest: 'assets/teams/borussia-dortmund.png', short: 'BVB' },
   // Seleções (o nome inclui "Seleção", igual ao campo `team` dos produtos)
   // label: nome curto na faixa de escudos · plate: escudo sobre disco branco (escudos claros)

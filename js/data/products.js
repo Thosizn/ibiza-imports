@@ -14,7 +14,7 @@
  * Campos:
  *   id          (obrigatório) Identificador único, sem espaços/acentos. Vai na URL.
  *   team        (obrigatório) Time ou seleção, ex.: 'Cruzeiro', 'Seleção Brasil'.
- *   category    (obrigatório) 'brasileiros' | 'europeus' | 'selecoes'
+ *   category    (obrigatório) 'brasileiros' | 'europeus' | 'mundo' | 'selecoes'
  *   kit         'I' (titular), 'II' (reserva), 'III' (terceira)...
  *   season      Clubes: '2026/2027'. Seleções: '2026'.
  *   brand       Fornecedora, ex.: 'Adidas', 'Nike', 'Puma'.
@@ -1735,7 +1735,7 @@ Ibiza.products = [
   {
     id: 'al-nassr-i-2026-2027',
     team: 'Al-Nassr',
-    category: 'europeus',
+    category: 'mundo',
     kit: 'I',
     season: '2026/2027',
     brand: 'Adidas',
@@ -1757,7 +1757,7 @@ Ibiza.products = [
   {
     id: 'al-nassr-ii-2026-2027',
     team: 'Al-Nassr',
-    category: 'europeus',
+    category: 'mundo',
     kit: 'II',
     season: '2026/2027',
     brand: 'Adidas',
@@ -1779,7 +1779,7 @@ Ibiza.products = [
   {
     id: 'al-nassr-iii-2026-2027',
     team: 'Al-Nassr',
-    category: 'europeus',
+    category: 'mundo',
     kit: 'III',
     season: '2026/2027',
     brand: 'Adidas',
@@ -1801,7 +1801,7 @@ Ibiza.products = [
   {
     id: 'inter-miami-i-2026-2027',
     team: 'Inter Miami',
-    category: 'europeus',
+    category: 'mundo',
     kit: 'I',
     season: '2026/2027',
     brand: 'Adidas',
@@ -1823,7 +1823,7 @@ Ibiza.products = [
   {
     id: 'inter-miami-ii-2026-2027',
     team: 'Inter Miami',
-    category: 'europeus',
+    category: 'mundo',
     kit: 'II',
     season: '2026/2027',
     brand: 'Adidas',
@@ -1845,7 +1845,7 @@ Ibiza.products = [
   {
     id: 'inter-miami-iii-2026-2027',
     team: 'Inter Miami',
-    category: 'europeus',
+    category: 'mundo',
     kit: 'III',
     season: '2026/2027',
     brand: 'Adidas',

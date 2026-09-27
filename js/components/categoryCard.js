@@ -6,9 +6,9 @@ Ibiza.CategoryCard = function CategoryCard(category, { index = 0 } = {}) {
   const { escape } = Ibiza.utils;
   const count = Ibiza.catalog.countByCategory(category.id);
   const countLabel = count ? `${count} ${count === 1 ? 'camisa' : 'camisas'}` : 'Em breve';
-  // Bandeira para brasileiros, emoji para internacional e seleções, ícone para as demais
-  const flagCode = { brasileiros: 'br' }[category.id];
-  const emoji = { europeus: '🌍', selecoes: '🏆' }[category.id];
+  // Bandeira para brasileiros/europeus, emoji para resto do mundo e seleções, ícone para as demais
+  const flagCode = { brasileiros: 'br', europeus: 'eu' }[category.id];
+  const emoji = { mundo: '🌍', selecoes: '🏆' }[category.id];
   const iconHtml = flagCode
     ? `<span class="category-card__icon category-card__icon--flag">${Ibiza.flag(flagCode)}</span>`
     : emoji
