@@ -23,6 +23,7 @@ Ibiza.teams = [
   { id: 'fluminense', name: 'Fluminense', category: 'brasileiros', crest: 'assets/teams/fluminense.png', short: 'FLU' },
   { id: 'atletico-mineiro', name: 'Atlético Mineiro', category: 'brasileiros', crest: 'assets/teams/atletico-mineiro.png', short: 'CAM' },
   { id: 'gremio', name: 'Grêmio', category: 'brasileiros', crest: 'assets/teams/gremio.png', short: 'GRE' },
+  { id: 'bahia', name: 'Bahia', category: 'brasileiros', crest: 'assets/teams/bahia.png', short: 'BAH' },
   { id: 'internacional', name: 'Internacional', category: 'brasileiros', crest: 'assets/teams/internacional.png', short: 'INT' },
 
   // Europeus
