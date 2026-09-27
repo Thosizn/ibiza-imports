@@ -33,7 +33,7 @@ Ibiza.pages.home = (() => {
           </div>
 
           <div class="hero__visual">
-            <img class="hero__logo" src="assets/img/logo.png" alt="${config.storeName} — ${config.tagline}" width="758" height="751" />
+            <img class="hero__logo" src="assets/img/logo.jpg" alt="${config.storeName} — ${config.tagline}" width="700" height="693" fetchpriority="high" decoding="async" />
           </div>
         </div>
       </section>`;

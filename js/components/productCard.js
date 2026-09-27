@@ -10,8 +10,8 @@ Ibiza.ProductCard = function ProductCard(product, { index = 0 } = {}) {
   const [primary, secondary] = product.images || [];
 
   const media = primary
-    ? `<img class="product-card__img" src="${escape(primary)}" alt="${escape(product.name)}" loading="lazy" />
-       ${secondary ? `<img class="product-card__img product-card__img--alt" src="${escape(secondary)}" alt="" loading="lazy" aria-hidden="true" />` : ''}`
+    ? `<img class="product-card__img" src="${escape(primary)}" alt="${escape(product.name)}" loading="lazy" decoding="async" />
+       ${secondary ? `<img class="product-card__img product-card__img--alt" data-src="${escape(secondary)}" alt="" decoding="async" aria-hidden="true" />` : ''}`
     : `<div class="product-card__placeholder">${icon('shirt', { size: 64, strokeWidth: 1.2 })}<span>Foto em breve</span></div>`;
 
   return `
@@ -44,6 +44,18 @@ Ibiza.ProductCard.grid = function grid(products, { className = '' } = {}) {
 };
 
 Ibiza.ProductCard.bind = function bind(container) {
+  // A 2ª foto (troca ao passar o mouse) só é baixada quando o cursor chega perto do card
+  const loadAlt = (e) => {
+    const card = e.target.closest && e.target.closest('[data-product-card]');
+    const alt = card && card.querySelector('.product-card__img--alt[data-src]');
+    if (alt) {
+      alt.src = alt.dataset.src;
+      alt.removeAttribute('data-src');
+    }
+  };
+  container.addEventListener('pointerover', loadAlt);
+  container.addEventListener('focusin', loadAlt);
+
   container.addEventListener('click', (e) => {
     const addBtn = e.target.closest('[data-card-add]');
     if (!addBtn) return;
