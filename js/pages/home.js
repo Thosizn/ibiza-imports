@@ -39,28 +39,6 @@ Ibiza.pages.home = (() => {
       </section>`;
   }
 
-  /** Faixa de escudos rolando: todos os times/seleções com camisa no catálogo. */
-  function crestMarquee() {
-    const teams = Ibiza.teams.filter((t) => t.crest && Ibiza.catalog.byTeam(t.name).length);
-    if (teams.length < 4) return '';
-    const items = teams
-      .map(
-        (t) => `
-        <a class="crest-marquee__item" href="#/catalogo?categoria=${t.category}&time=${t.id}" title="${t.label || t.name}">
-          <img src="${t.crest}" alt="${t.label || t.name}" loading="lazy" decoding="async" width="56" height="56" />
-        </a>`
-      )
-      .join('');
-    // lista duplicada: quando a primeira metade sai da tela, a segunda ocupa o lugar (loop contínuo)
-    return `
-      <section class="crest-marquee" aria-label="Times e seleções disponíveis">
-        <div class="crest-marquee__track" style="--count:${teams.length}">
-          <div class="crest-marquee__group">${items}</div>
-          <div class="crest-marquee__group" aria-hidden="true">${items}</div>
-        </div>
-      </section>`;
-  }
-
   function highlights() {
     const items = [
       { icon: 'globe', title: 'Modelos importados', text: 'Camisas de clubes e seleções de todo o mundo.' },
@@ -167,7 +145,7 @@ Ibiza.pages.home = (() => {
   return {
     title: '',
     render() {
-      return `<div class="page page--home">${hero()}${crestMarquee()}${highlights()}${featured()}${categories()}${catalogCta()}</div>`;
+      return `<div class="page page--home">${hero()}${highlights()}${featured()}${categories()}${catalogCta()}</div>`;
     },
     mount(root) {
       root.querySelectorAll('[data-scroll-to]').forEach((btn) =>

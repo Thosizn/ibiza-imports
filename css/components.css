@@ -600,29 +600,6 @@ a.badge--outline:hover { border-color: var(--ink); color: var(--text); }
 .product-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); border-color: transparent; }
 .product-card.reveal:not(.is-visible) { transform: translateY(22px); }
 
-/* Inclinação 3D + brilho dourado seguindo o mouse (só em computador) */
-.product-card.is-tilting {
-  transform: perspective(900px) translateY(-6px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
-  transition: transform 120ms linear, box-shadow var(--t-slow) var(--ease), border-color var(--t) var(--ease);
-  box-shadow: 0 24px 40px -18px rgba(15, 15, 18, 0.45);
-}
-.product-card__media::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  pointer-events: none;
-  background:
-    radial-gradient(circle at var(--mx, 50%) var(--my, 30%), rgba(255, 236, 190, 0.55) 0%, rgba(242, 178, 51, 0.18) 22%, transparent 55%),
-    linear-gradient(115deg, transparent 38%, rgba(255, 255, 255, 0.22) 48%, transparent 58%);
-  background-size: 100% 100%, 250% 250%;
-  background-position: 0 0, var(--sx, 100%) 0;
-  mix-blend-mode: soft-light;
-  opacity: 0;
-  transition: opacity var(--t) var(--ease);
-}
-.product-card.is-tilting .product-card__media::after { opacity: 1; }
-
 .product-card__media {
   position: relative;
   display: block;

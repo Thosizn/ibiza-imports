@@ -56,34 +56,6 @@ Ibiza.ProductCard.bind = function bind(container) {
   container.addEventListener('pointerover', loadAlt);
   container.addEventListener('focusin', loadAlt);
 
-  // Inclinação 3D + brilho seguindo o mouse (desativado no celular e com "reduzir movimento")
-  const canTilt = window.matchMedia('(hover: hover) and (pointer: fine)').matches && !Ibiza.utils.prefersReducedMotion();
-  if (canTilt) {
-    const MAX = 5; // graus
-    let frame = 0;
-    container.addEventListener('pointermove', (e) => {
-      const card = e.target.closest && e.target.closest('[data-product-card]');
-      if (!card || card.classList.contains('product-card--placeholder')) return;
-      cancelAnimationFrame(frame);
-      frame = requestAnimationFrame(() => {
-        const r = card.getBoundingClientRect();
-        const px = (e.clientX - r.left) / r.width, py = (e.clientY - r.top) / r.height;
-        card.classList.add('is-tilting');
-        card.style.setProperty('--ry', `${(px - 0.5) * 2 * MAX}deg`);
-        card.style.setProperty('--rx', `${(0.5 - py) * 2 * MAX}deg`);
-        card.style.setProperty('--mx', `${px * 100}%`);
-        card.style.setProperty('--my', `${py * 100}%`);
-        card.style.setProperty('--sx', `${100 - px * 100}%`);
-      });
-    });
-    container.addEventListener('pointerout', (e) => {
-      const card = e.target.closest && e.target.closest('[data-product-card]');
-      if (!card || card.contains(e.relatedTarget)) return;
-      cancelAnimationFrame(frame);
-      card.classList.remove('is-tilting');
-    });
-  }
-
   container.addEventListener('click', (e) => {
     const addBtn = e.target.closest('[data-card-add]');
     if (!addBtn) return;
