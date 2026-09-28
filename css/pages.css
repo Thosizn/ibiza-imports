@@ -180,6 +180,59 @@
   .hero__actions .btn { flex: 1; }
 }
 
+/* ---------- Home: faixa de escudos em movimento ---------- */
+.crest-marquee {
+  position: relative;
+  overflow: hidden;
+  padding-block: 18px;
+  background: var(--ink);
+  border-top: 1px solid var(--ink-line);
+  border-bottom: 1px solid var(--ink-line);
+}
+/* os escudos somem suavemente nas bordas */
+.crest-marquee::before,
+.crest-marquee::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  width: clamp(40px, 10vw, 140px);
+  pointer-events: none;
+}
+.crest-marquee::before { left: 0; background: linear-gradient(90deg, var(--ink), transparent); }
+.crest-marquee::after { right: 0; background: linear-gradient(270deg, var(--ink), transparent); }
+.crest-marquee__track {
+  display: flex;
+  width: max-content;
+  animation: marquee calc(var(--count) * 2.6s) linear infinite;
+}
+.crest-marquee:hover .crest-marquee__track,
+.crest-marquee:focus-within .crest-marquee__track { animation-play-state: paused; }
+.crest-marquee__group { display: flex; gap: clamp(28px, 4vw, 52px); padding-right: clamp(28px, 4vw, 52px); }
+.crest-marquee__item {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: clamp(52px, 5.6vw, 64px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 35%, #ffffff 0%, #eeeae2 100%);
+  box-shadow: 0 0 0 2px transparent;
+  opacity: 0.82;
+  transition: opacity var(--t) var(--ease), transform var(--t) var(--ease), box-shadow var(--t) var(--ease);
+}
+.crest-marquee__item img { width: 66%; height: 66%; object-fit: contain; }
+.crest-marquee__item:hover,
+.crest-marquee__item:focus-visible { opacity: 1; transform: scale(1.12); box-shadow: 0 0 0 2px var(--gold), 0 8px 20px -8px rgba(242, 178, 51, 0.6); }
+@keyframes marquee { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) {
+  .crest-marquee__track { animation: none; }
+  .crest-marquee { overflow-x: auto; scrollbar-width: none; }
+  .crest-marquee::-webkit-scrollbar { display: none; }
+  .crest-marquee__group[aria-hidden] { display: none; }
+}
+
 /* ---------- Home: Destaques rápidos ---------- */
 .highlights { background: var(--surface); border-bottom: 1px solid var(--line); }
 .highlights__grid { display: grid; grid-template-columns: repeat(3, 1fr); }
